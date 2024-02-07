@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component'
 import { FormsModule } from '@angular/forms';
-import { HeroesComponent } from './heroes/component/heroes.component';
+import { HeroesComponent } from './components/heroes/heroes.component';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { HeroesComponent } from './heroes/component/heroes.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

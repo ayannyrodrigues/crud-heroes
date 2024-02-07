@@ -1,0 +1,20 @@
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<h1>My Heroes</h1>
+<div>
+  <ul class="heroes">
+    <li
+      *ngFor="let hero of heroes"
+      (click)="onSelect(hero)"
+      [class.selected]="hero === selectedHero"
+    >
+      <span>{{ hero.id }}</span> {{ hero.name }}
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="selectedHero">
+  <h2> {{ selectedHero.name | uppercase }} Details</h2>
+  <p> Id: {{ selectedHero.id }} </p>
+  <p> Name: {{ selectedHero.name }} </p>
+</div>
